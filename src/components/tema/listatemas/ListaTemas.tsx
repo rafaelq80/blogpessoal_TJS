@@ -1,16 +1,17 @@
-﻿import { useNavigate } from "react-router-dom";
-import CardTemas from "../cardtemas/CardTemas"
-import { useContext, useEffect, useState } from "react";
-import Tema from "../../../models/Tema";
-import { AuthContext } from "../../../contexts/AuthContext";
-import { buscar } from "../../../services/Service";
+﻿import { useContext, useEffect, useState } from "react";
 import { DNA } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthContext";
+import Tema from "../../../models/Tema";
+import { buscar } from "../../../services/Service";
+import CardTemas from "../cardtemas/CardTemas";
 
 function ListaTemas() {
 
     const navigate = useNavigate()
 
     const [temas, setTemas] = useState<Tema[]>([])
+    
 
     const { usuario, handleLogout } = useContext(AuthContext)
     const token = usuario.token
