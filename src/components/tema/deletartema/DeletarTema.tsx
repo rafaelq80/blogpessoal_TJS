@@ -25,7 +25,6 @@ function DeletarTema() {
             })
         } catch (error: any) {
             if (error.toString().includes('401')) {
-                alert('O token expirou!')
                 handleLogout()
             }
         }
@@ -58,7 +57,6 @@ function DeletarTema() {
             alert('O Tema foi apagado com sucesso!')
         } catch (error: any) {
             if (error.toString().includes('401')) {
-                alert('O token expirou!')
                 handleLogout()
             }else{
                 alert('Erro ao Excluir o Tema!')

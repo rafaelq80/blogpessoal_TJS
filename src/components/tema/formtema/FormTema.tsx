@@ -9,7 +9,6 @@ function FormTema() {
 
     const navigate = useNavigate()
 
-    // Receber os dados do Tema, que será cadastrado ou atualizado
     const [tema, setTema] = useState<Tema>({} as Tema);
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
@@ -25,7 +24,6 @@ function FormTema() {
             })
         } catch (error: any) {
             if (error.toString().includes('401')) {
-                alert('O token expirou!')
                 handleLogout()
             }
         }
@@ -68,7 +66,6 @@ function FormTema() {
                 alert('Tema atualizado com sucesso!');
             } catch (error: any) {
                 if (error.toString().includes('401')) {
-                    alert('O token Expirou!')
                     handleLogout()
                 } else {
                     alert('Erro ao atualizar o Tema!')
@@ -84,7 +81,6 @@ function FormTema() {
                 alert('Tema cadastrado com sucesso!');
             } catch (error: any) {
                 if (error.toString().includes('401')) {
-                    alert('O token Expirou!')
                     handleLogout()
                 } else {
                     alert('Erro ao cadastrar o Tema!')
