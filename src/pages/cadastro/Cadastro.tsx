@@ -179,15 +179,6 @@ function Cadastro() {
     setIsLoading(false)
   }
 
-   /**
-     * Exibe o conteúdo dos Estados usuario e confirmaSenha no console.
-     * Em produção esta linha deve ser removida.
-     */
-  console.log(JSON.stringify({
-    usuario,
-    confirmaSenha
-  }));
-
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen 
