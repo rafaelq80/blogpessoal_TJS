@@ -9,7 +9,6 @@ function DeletarTema() {
 
     const navigate = useNavigate()
 
-    // Receber os dados do Tema, que será cadastrado ou atualizado
     const [tema, setTema] = useState<Tema>({} as Tema);
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
@@ -47,6 +46,10 @@ function DeletarTema() {
         navigate('/temas')
     }
 
+    /**
+     * Criamos a função deletarTema, responsável por deletar 
+     * um tema da aplicação (DELETE).
+     */
     async function deletarTema() {
         setIsLoading(true)
 
