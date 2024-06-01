@@ -20,7 +20,7 @@
  * - /postagens é a URL do endpoint
  */
 const api = axios.create({
-    baseURL: "https://blogpessoal-nest-qz4t.onrender.com",
+    baseURL: import.meta.env.VITE_API_URL
 });
 
 /**
