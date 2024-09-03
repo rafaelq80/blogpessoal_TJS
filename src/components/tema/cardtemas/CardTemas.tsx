@@ -16,8 +16,8 @@ interface CardTemasProps{
  */
 function CardTemas({ tema }: CardTemasProps) {
     return (
-        <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-            <header className='py-2 px-6 bg-indigo-800 text-white font-bold text-2xl'>
+        <div className='flex flex-col justify-between border rounded-2xl overflow-hidden'>
+            <header className='bg-indigo-800 px-6 py-2 font-bold text-2xl text-white'>
                 Tema
             </header>
 
@@ -27,7 +27,7 @@ function CardTemas({ tema }: CardTemasProps) {
                 a propriedade descricao do Objeto tema, que foi enviado como uma propriedade (**Props**) 
                 para o Componente CardTema.
             */}
-            <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
+            <p className='bg-slate-200 p-8 h-full text-3xl'>{tema.descricao}</p>
 
             <div className="flex">
 
@@ -39,14 +39,12 @@ function CardTemas({ tema }: CardTemasProps) {
                     Editado ou Deletado.
                 */}
                 <Link to={`/editartema/${tema.id}`}
-                    className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 
-                        flex items-center justify-center py-2'>
+                    className='flex justify-center items-center bg-indigo-400 hover:bg-indigo-800 py-2 w-full text-slate-100'>
                     <button>Editar</button>
                 </Link>
 
                 <Link to={`/deletartema/${tema.id}`}
-                    className='text-slate-100 bg-red-400 hover:bg-red-700 w-full 
-		                        flex items-center justify-center'>
+                    className='flex justify-center items-center bg-red-400 hover:bg-red-700 w-full text-slate-100'>
                     <button>Deletar</button>
                 </Link>
             </div>

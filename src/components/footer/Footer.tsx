@@ -16,8 +16,8 @@ function Footer() {
     if (usuario.token !== ""){
         component = (
             <div className="flex justify-center bg-indigo-900 text-white">
-                <div className="container flex flex-col items-center py-4">
-                    <p className='text-xl font-bold'>
+                <div className="flex flex-col items-center py-4 container">
+                    <p className='font-bold text-xl'>
                         Blog Pessoal Generation | Copyright: {data}
                     </p>
                     <p className='text-lg'>Acesse nossas redes sociais</p>

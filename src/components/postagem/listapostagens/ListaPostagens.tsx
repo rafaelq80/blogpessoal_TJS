@@ -54,8 +54,7 @@ function ListaPostagens() {
                     wrapperClass="dna-wrapper mx-auto"
                 />
             )}
-            <div className='container mx-auto my-4 
-                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
+            <div className='gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto my-4 container'
             >
                 {postagens.map((postagem) => (
                     <CardPostagens key={postagem.id} postagem={postagem} />

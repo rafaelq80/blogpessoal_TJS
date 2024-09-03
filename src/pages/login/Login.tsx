@@ -27,7 +27,7 @@ function Login() {
      * as, que declara explicitamente ao TypeScript que o objeto vazio
      * será do tipo informado.
      * 
-     * O estado **usuarioLogin**, será utilizado para armazenar os dados 
+     * O estado usuarioLogin, será utilizado para armazenar os dados 
      * do usuário, que foram digitados no Formulário da Página de Login. 
      */
     const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
@@ -79,7 +79,6 @@ function Login() {
         })
     }
 
-
     /**
      * A função login será responsável por lidar com o processo de autenticação do usuário, 
      * que será executada através do evento onSubmit do Formulário da Página de Login. 
@@ -97,7 +96,7 @@ function Login() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+            <div className="place-items-center grid grid-cols-1 lg:grid-cols-2 h-screen font-bold">
 
                 {/* 
                     Adicionamos o Evento onSubmit no formulário, passando como argumento 
@@ -105,10 +104,10 @@ function Login() {
                     (clicar no botão entrar), a função definida dentro dos parênteses será
                     executada. 
                 */}
-                <form className="flex justify-center items-center flex-col w-1/2 gap-4" 
+                <form className="flex flex-col justify-center items-center gap-4 w-1/2" 
                     onSubmit={login}
                 >
-                    <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+                    <h2 className="text-5xl text-slate-900">Entrar</h2>
                     <div className="flex flex-col w-full">
                         <label htmlFor="usuario">Usuário</label>
                         <input
@@ -116,7 +115,7 @@ function Login() {
                             id="usuario"
                             name="usuario"
                             placeholder="Usuario"
-                            className="border-2 border-slate-700 rounded p-2"
+                            className="border-2 border-slate-700 p-2 rounded"
                             /**
                              * Através da propriedade value, definimos que o valor dentro desse 
                              * input será o mesmo valor que estiver armazenado no respectivo 
@@ -141,7 +140,7 @@ function Login() {
                             id="senha"
                             name="senha"
                             placeholder="Senha"
-                            className="border-2 border-slate-700 rounded p-2"
+                            className="border-2 border-slate-700 p-2 rounded"
                             /**
                              * Através da propriedade value, definimos que o valor dentro desse 
                              * input será o mesmo valor que estiver armazenado no respectivo 
@@ -161,8 +160,7 @@ function Login() {
                     </div>
                     <button
                         type='submit'
-                        className="rounded bg-indigo-400 flex justify-center
-                                   hover:bg-indigo-900 text-white w-1/2 py-2">
+                        className="flex justify-center bg-indigo-400 hover:bg-indigo-900 py-2 rounded w-1/2 text-white">
 
                         {/* 
                             Através de uma Expressão Ternária, verificaremos qual é o valor atual do Estado 
@@ -205,7 +203,7 @@ function Login() {
                         </Link>
                     </p>
                 </form>
-                <div className="fundoLogin hidden lg:block"></div>
+                <div className="lg:block hidden fundoLogin"></div>
             </div>
         </>
     );

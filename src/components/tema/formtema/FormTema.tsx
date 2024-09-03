@@ -135,8 +135,8 @@ function FormTema() {
     }
 
     return (
-        <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
+        <div className="flex flex-col justify-center items-center mx-auto container">
+            <h1 className="my-8 text-4xl text-center">
 
                 {/* 
                     Através de uma Expressão Ternária, utilizaremos a variável id 
@@ -151,7 +151,7 @@ function FormTema() {
                 {id === undefined ? 'Cadastrar Tema' : 'Editar Tema'}
             </h1>
 
-            <form className="w-1/2 flex flex-col gap-4"
+            <form className="flex flex-col gap-4 w-1/2"
                 onSubmit={gerarNovoTema}
             >
                 <div className="flex flex-col gap-2">
@@ -160,14 +160,13 @@ function FormTema() {
                         type="text"
                         placeholder="Descreva aqui seu tema"
                         name='descricao'
-                        className="border-2 border-slate-700 rounded p-2"
+                        className="border-2 border-slate-700 p-2 rounded"
                         value={tema.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <button
-                    className="rounded text-slate-100 bg-indigo-400 
-                               hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
+                    className="flex justify-center bg-indigo-400 hover:bg-indigo-800 mx-auto py-2 rounded w-1/2 text-slate-100"
                     type="submit">
 
                     {isLoading ? <RotatingLines

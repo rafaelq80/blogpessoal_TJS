@@ -72,26 +72,25 @@ function DeletarTema() {
     }
 
     return (
-        <div className='container w-1/3 mx-auto'>
-            <h1 className='text-4xl text-center my-4'>Deletar tema</h1>
-            <p className='text-center font-semibold mb-4'>
+        <div className='mx-auto w-1/3 container'>
+            <h1 className='my-4 text-4xl text-center'>Deletar tema</h1>
+            <p className='mb-4 font-semibold text-center'>
                 Você tem certeza de que deseja apagar o tema a seguir?</p>
-            <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
+            <div className='flex flex-col justify-between border rounded-2xl overflow-hidden'>
                 <header 
-                    className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
+                    className='bg-indigo-600 px-6 py-2 font-bold text-2xl text-white'>
                     Tema
                 </header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
+                <p className='bg-slate-200 p-8 h-full text-3xl'>{tema.descricao}</p>
                 <div className="flex">
                     <button 
-                        className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
+                        className='bg-red-400 hover:bg-red-600 py-2 w-full text-slate-100'
                         onClick={retornar}
                         >
                         Não
                     </button>
                     <button 
-                        className='w-full text-slate-100 bg-indigo-400 
-                                   hover:bg-indigo-600 flex items-center justify-center'
+                        className='flex justify-center items-center bg-indigo-400 hover:bg-indigo-600 w-full text-slate-100'
                         onClick={deletarTema}
                         >
                         {isLoading ? <RotatingLines
